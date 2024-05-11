@@ -1,0 +1,7 @@
+{
+  "name": "PIA-2064487",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
