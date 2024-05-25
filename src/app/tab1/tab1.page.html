@@ -21,6 +21,11 @@
         <p>Descripcion: {{nota.descripcion}}</p>
       </ion-card-content>
 
+      <ion-buttons slot="end">
+        <ion-button (click)="deleteDocumentID('Notas', nota.id)">
+          <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
 
     </ion-item-sliding></ion-list>
   </div>

@@ -54,6 +54,10 @@ export class DataService {
     return deleteDoc(document);
   }
 
+  deleteDocFromRef(ref: any) {
+    return deleteDoc(ref)
+  }
+
   createIdDoc(){
     return uuidv4()
   }
