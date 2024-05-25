@@ -1,0 +1,18 @@
+<div class="container">
+
+  <div class="user-info " *ngIf="isLoggedIn">
+    <ion-avatar aria-hidden="true" slot="start" style="margin-left: 41px; margin-bottom: 20px;" >
+      <img alt="Profile Picture" src={{user?.photoUrl}}/>
+    </ion-avatar>
+    <ion-label>Bienvenido, {{user?.name}} </ion-label>
+  </div>
+
+  <div class="user-info " *ngIf="!isLoggedIn">
+    <ion-button [routerLink]="'/auth/'">Inicia sesión o regístrate</ion-button>
+  </div>
+
+  <div class="container-btns">
+    <ion-button expand="full" shape="round" size="large" color="tertiary" [routerLink]="'/auth/login/'">Iniciar sesión</ion-button>
+    <ion-button expand="full" shape="round" size="large" color="tertiary" [routerLink]="'/auth/signup/'">Crear cuenta</ion-button>
+  </div>
+</div>

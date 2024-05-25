@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Explorar Notas
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,21 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Notas</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <div *ngFor="let nota of notas$ | async" style="margin: 10px;">
+    <ion-list><ion-item-sliding>
+
+      <ion-card-title style="padding: 10px;">{{nota.titulo}}</ion-card-title>
+      <ion-card-content>
+        <p>Descripcion: {{nota.descripcion}}</p>
+      </ion-card-content>
+
+
+    </ion-item-sliding></ion-list>
+  </div>
 
   <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>

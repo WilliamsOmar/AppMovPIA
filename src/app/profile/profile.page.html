@@ -1,0 +1,26 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="medium">Perfil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="main-container">
+    <figure>
+      <ion-avatar>
+        <img alt="Silhouette of a person's head" [src]="this.photo"/>
+      </ion-avatar>
+      <figcaption><a (click)="this.takePhoto()">Cambiar foto</a></figcaption>
+    </figure>
+    <div class="profile-opt">
+      <ion-input [(ngModel)]="infoUsuario.usuario" label="Usuario" placeholder="Nuevo nombre de usuario"></ion-input>
+      <ion-input [(ngModel)]="infoUsuario.correo" label="Correo" placeholder="Nuevo correo"></ion-input>
+      <ion-input [(ngModel)]="infoUsuario.newPasswd" label="Contraseña Nueva" placeholder="Nueva contraseña"
+                 type="password"></ion-input>
+      <br>
+      <ion-input [(ngModel)]="infoUsuario.passwd" label="Contraseña" placeholder="Contraseña actual"
+                 type="password"></ion-input>
+      <ion-button [disabled]="!allowChanges" (click)="crearCambios()">Aceptar cambios</ion-button>
+    </div>
+  </div>
+</ion-content>

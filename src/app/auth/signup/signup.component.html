@@ -1,0 +1,13 @@
+<div class="main-container">
+  <div class="input-text">
+    <ion-text style="text-align: center;">
+      <h2>Crea tu cuenta</h2>
+      <h3 style="font-size: small;">¿Ya tienes una cuenta? <a [routerLink]="'/auth/login/'">Inicia sesión</a></h3>
+    </ion-text>
+  </div>
+  <div class="input-container">
+    <ion-input [(ngModel)]="correo" label="Correo" labelPlacement="floating"></ion-input>
+    <ion-input [(ngModel)]="passwd" label="Contraseña" type="password" labelPlacement="floating"></ion-input>
+    <ion-button (click)="generar()" [disabled]="!correo || !passwd" >Crear cuenta</ion-button>
+  </div>
+</div>
